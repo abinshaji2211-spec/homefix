@@ -1,0 +1,913 @@
+
+/* =================================
+   HOMEFIX SOLUTIONS
+   ONE CALL. ALL SOLUTIONS.
+   ================================= */
+
+:root {
+    --dark: #071b30;
+    --dark2: #0d2b45;
+    --blue: #078eae;
+    --cyan: #20c6d9;
+    --green: #16d878;
+    --white: #ffffff;
+    --light: #f4f8fc;
+    --grey: #738195;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    background: var(--light);
+    color: var(--dark);
+    overflow-x: hidden;
+}
+
+/* NAVBAR */
+
+.navbar {
+    background: var(--dark);
+    padding: 20px 8%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 20px #0002;
+}
+
+.logo,
+.footer-logo {
+    font-size: 23px;
+    font-weight: 900;
+    color: white;
+    text-decoration: none;
+    letter-spacing: 1px;
+    line-height: 1.1;
+}
+
+.logo span,
+.footer-logo span {
+    color: var(--cyan);
+}
+
+.logo small,
+.footer-logo small {
+    display: block;
+    font-size: 9px;
+    letter-spacing: 5px;
+    margin-top: 5px;
+    font-weight: 600;
+}
+
+.navbar nav {
+    display: flex;
+    gap: 25px;
+}
+
+.navbar nav a {
+    text-decoration: none;
+    color: #dce8f0;
+    font-size: 13px;
+    font-weight: 600;
+    transition: .3s;
+}
+
+.navbar nav a:hover {
+    color: var(--cyan);
+}
+
+.nav-call {
+    color: var(--dark);
+    background: var(--cyan);
+    padding: 12px 18px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 800;
+}
+
+.menu-toggle {
+    display: none;
+    color: white;
+    background: none;
+    border: none;
+    font-size: 27px;
+    cursor: pointer;
+}
+
+
+/* HERO */
+
+.hero {
+    min-height: 620px;
+    background:
+        radial-gradient(circle at 85% 35%, #087e9a55, transparent 35%),
+        linear-gradient(125deg, #06182a, #103b55);
+
+    display: flex;
+    align-items: center;
+    padding: 90px 8%;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-content {
+    max-width: 730px;
+    z-index: 2;
+    animation: slideUp .9s ease both;
+}
+
+.hero-label,
+.section-label {
+    color: var(--blue);
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 3px;
+    margin-bottom: 16px;
+}
+
+.hero-label {
+    color: var(--cyan);
+    margin-top: 30px;
+}
+
+.hero h1 {
+    color: white;
+    font-size: clamp(43px, 7vw, 76px);
+    font-weight: 900;
+    line-height: 1.08;
+    letter-spacing: -3px;
+    margin-bottom: 25px;
+}
+
+.hero h1 span {
+    color: var(--cyan);
+}
+
+.hero-description {
+    color: #c4d6e4;
+    font-size: 16px;
+    line-height: 1.9;
+    max-width: 590px;
+}
+
+.hero-location {
+    color: white;
+    font-size: 13px;
+    margin-top: 22px;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 15px;
+    margin-top: 32px;
+    flex-wrap: wrap;
+}
+
+.primary-btn,
+.secondary-btn,
+.whatsapp-btn {
+    display: inline-block;
+    padding: 15px 23px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 13px;
+    font-weight: 800;
+    transition: .3s;
+}
+
+.primary-btn {
+    color: var(--dark);
+    background: var(--cyan);
+}
+
+.secondary-btn {
+    border: 1px solid #ffffff70;
+    color: white;
+}
+
+.primary-btn:hover,
+.secondary-btn:hover,
+.whatsapp-btn:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px #0003;
+}
+
+
+/* HERO DECORATION */
+
+.hero-decoration {
+    position: absolute;
+    right: 13%;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 270px;
+    height: 270px;
+    border: 1px solid #20c6d955;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    animation: float 4s ease-in-out infinite;
+}
+
+.decoration-circle {
+    width: 205px;
+    height: 205px;
+    border: 2px solid var(--cyan);
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    background: #ffffff08;
+    box-shadow: 0 0 60px #20c6d922;
+}
+
+.decoration-circle span {
+    font-size: 75px;
+    font-weight: 900;
+    color: var(--cyan);
+    letter-spacing: -5px;
+}
+
+.decoration-small {
+    position: absolute;
+    right: -5px;
+    top: 25px;
+    background: var(--cyan);
+    color: var(--dark);
+    padding: 13px;
+    border-radius: 50%;
+    font-weight: 900;
+}
+
+
+/* LIVE INDICATOR */
+
+.availability {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 11px 17px;
+    color: var(--green);
+    background: #16d87815;
+    border: 1px solid #16d87855;
+    border-radius: 30px;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+.live-dot {
+    width: 9px;
+    height: 9px;
+    background: var(--green);
+    border-radius: 50%;
+    animation: liveBlink 1.2s infinite;
+}
+
+@keyframes liveBlink {
+    0%, 100% {
+        opacity: 1;
+        box-shadow: 0 0 0 0 #16d87880;
+    }
+    50% {
+        opacity: .4;
+        box-shadow: 0 0 0 9px #16d87800;
+    }
+}
+
+
+/* GENERAL SECTION */
+
+.services-section,
+.why-section,
+.booking-section,
+.contact-section {
+    padding: 90px 8%;
+}
+
+.section-heading {
+    text-align: center;
+    margin-bottom: 55px;
+}
+
+.section-heading h2 {
+    font-size: 38px;
+    font-weight: 900;
+    margin-bottom: 15px;
+}
+
+.section-heading h2 span {
+    color: var(--blue);
+}
+
+.section-heading > p:last-child {
+    color: var(--grey);
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+
+/* CATEGORY HEADING */
+
+.category-heading {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin: 65px 0 30px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #dce5ed;
+}
+
+.category-number {
+    font-size: 29px;
+    font-weight: 900;
+    color: var(--blue);
+    background: #dff5fa;
+    padding: 16px 19px;
+    border-radius: 8px;
+}
+
+.category-heading h2 {
+    font-size: 25px;
+    font-weight: 800;
+}
+
+.category-heading p {
+    color: var(--grey);
+    font-size: 13px;
+    margin-top: 8px;
+}
+
+.cleaning-heading .category-number {
+    color: #0a9c77;
+    background: #dff8ed;
+}
+
+
+/* SERVICE CARDS */
+
+.service-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.service-card {
+    position: relative;
+    background: white;
+    border: 1px solid #e8eef3;
+    border-radius: 10px;
+    padding: 27px 23px;
+    overflow: hidden;
+    transition: .35s ease;
+}
+
+.service-card::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 0;
+    height: 3px;
+    background: var(--cyan);
+    transition: .4s;
+}
+
+.service-card:hover::before {
+    width: 100%;
+}
+
+.service-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 35px #09283d15;
+    border-color: #20c6d955;
+}
+
+.card-icon {
+    font-size: 37px;
+    margin-bottom: 24px;
+    display: inline-block;
+    transition: .3s;
+}
+
+.service-card:hover .card-icon {
+    transform: scale(1.15) rotate(-5deg);
+}
+
+.card-number {
+    position: absolute;
+    top: 27px;
+    right: 22px;
+    color: #d4e2eb;
+    font-size: 23px;
+    font-weight: 900;
+}
+
+.service-card h3 {
+    font-size: 16px;
+    margin-bottom: 13px;
+    font-weight: 800;
+}
+
+.service-card p {
+    color: var(--grey);
+    font-size: 12px;
+    line-height: 1.8;
+    min-height: 66px;
+}
+
+.service-card a {
+    display: inline-block;
+    margin-top: 22px;
+    color: var(--blue);
+    font-size: 12px;
+    font-weight: 800;
+    text-decoration: none;
+}
+
+.service-card a span {
+    transition: .3s;
+}
+
+.service-card a:hover span {
+    margin-left: 7px;
+}
+
+.cleaning-card::before {
+    background: #0aaf84;
+}
+
+.cleaning-card:hover {
+    border-color: #0aaf8444;
+}
+
+.cleaning-card a {
+    color: #0a9876;
+}
+
+
+/* WHY CHOOSE US */
+
+.why-section {
+    background: #eaf4f8;
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.feature {
+    background: white;
+    border-radius: 10px;
+    padding: 30px 20px;
+    text-align: center;
+    transition: .3s;
+}
+
+.feature:hover {
+    transform: translateY(-7px);
+}
+
+.feature > span {
+    font-size: 35px;
+}
+
+.feature h3 {
+    font-size: 15px;
+    margin: 18px 0 10px;
+}
+
+.feature p {
+    color: var(--grey);
+    font-size: 12px;
+    line-height: 1.7;
+}
+
+
+/* BOOKING */
+
+.booking-section {
+    background: var(--dark);
+}
+
+.booking-section .section-heading h2 {
+    color: white;
+}
+
+.booking-section .section-heading > p:last-child {
+    color: #b9cad8;
+}
+
+.booking-section .section-label {
+    color: var(--cyan);
+}
+
+.booking-form {
+    max-width: 720px;
+    margin: auto;
+    background: white;
+    border-radius: 12px;
+    padding: 38px;
+    box-shadow: 0 15px 50px #0003;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 12px;
+    font-weight: 800;
+    margin-bottom: 9px;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 14px;
+    border: 1px solid #dce5ec;
+    background: #fafdff;
+    border-radius: 5px;
+    outline: none;
+    font-size: 13px;
+    color: var(--dark);
+    transition: .3s;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    border-color: var(--blue);
+    box-shadow: 0 0 0 3px #078eae16;
+}
+
+.form-group textarea {
+    resize: vertical;
+}
+
+.submit-btn {
+    width: 100%;
+    padding: 16px;
+    background: var(--blue);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-weight: 800;
+    font-size: 13px;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.submit-btn:hover {
+    background: var(--dark);
+    transform: translateY(-3px);
+}
+
+.form-note {
+    color: var(--grey);
+    font-size: 11px;
+    text-align: center;
+    margin-top: 16px;
+}
+
+
+/* LOCATION */
+
+.location-section {
+    padding: 75px 8%;
+    text-align: center;
+}
+
+.location-box {
+    max-width: 650px;
+    margin: auto;
+    padding: 40px 20px;
+    background: white;
+    border: 1px solid #e3ebf1;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px #00000008;
+}
+
+.location-icon {
+    font-size: 40px;
+    margin-bottom: 18px;
+}
+
+.location-box h2 {
+    font-size: 25px;
+}
+
+.location-box h3 {
+    color: var(--blue);
+    font-size: 19px;
+    margin: 15px;
+}
+
+.location-box p {
+    color: var(--grey);
+    font-size: 13px;
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
+
+/* CONTACT */
+
+.contact-section {
+    background: #eaf4f8;
+}
+
+.contact-card {
+    max-width: 550px;
+    background: white;
+    margin: auto;
+    padding: 40px;
+    text-align: center;
+    border-radius: 12px;
+    box-shadow: 0 10px 35px #0000000a;
+}
+
+.contact-card > p {
+    font-size: 12px;
+    font-weight: 800;
+    color: var(--grey);
+    letter-spacing: 2px;
+}
+
+.contact-card h2 {
+    font-size: 36px;
+    margin: 15px 0 25px;
+}
+
+.contact-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.whatsapp-btn {
+    background: #16bd68;
+    color: white;
+}
+
+
+/* FOOTER */
+
+footer {
+    background: #041323;
+    text-align: center;
+    padding: 45px 15px;
+    color: white;
+}
+
+.footer-logo {
+    display: inline-block;
+}
+
+.footer-slogan {
+    color: var(--cyan);
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 3px;
+    margin: 15px 0 25px;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+    margin-bottom: 28px;
+}
+
+.footer-links a {
+    text-decoration: none;
+    color: #b8c8d6;
+    font-size: 12px;
+}
+
+.footer-links a:hover {
+    color: var(--cyan);
+}
+
+.footer-line {
+    max-width: 800px;
+    height: 1px;
+    background: #ffffff20;
+    margin: 0 auto 25px;
+}
+
+footer > p:not(.footer-slogan) {
+    color: #9aaebf;
+    font-size: 11px;
+    margin: 10px;
+}
+
+
+/* FLOATING WHATSAPP */
+
+.floating-whatsapp {
+    position: fixed;
+    bottom: 22px;
+    right: 22px;
+    z-index: 999;
+    background: #16c76c;
+    color: white;
+    padding: 15px 21px;
+    border-radius: 50px;
+    font-size: 13px;
+    font-weight: 800;
+    text-decoration: none;
+    box-shadow: 0 5px 20px #0003;
+    transition: .3s;
+    animation: float 3s ease-in-out infinite;
+}
+
+.floating-whatsapp:hover {
+    background: #079d4e;
+    transform: scale(1.05);
+}
+
+
+/* ANIMATIONS */
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(35px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+/* SCROLL REVEAL */
+
+.reveal {
+    opacity: 0;
+    transform: translateY(35px);
+    transition: opacity .7s ease, transform .7s ease;
+}
+
+.reveal.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+/* RESPONSIVE */
+
+@media (max-width: 1050px) {
+
+    .hero-decoration {
+        right: 5%;
+        opacity: .5;
+    }
+
+    .service-grid,
+    .features-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+@media (max-width: 700px) {
+
+    .navbar {
+        padding: 17px 6%;
+    }
+
+    .navbar nav {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        padding: 25px;
+        background: var(--dark);
+        flex-direction: column;
+        gap: 22px;
+        box-shadow: 0 10px 15px #0003;
+    }
+
+    .navbar nav.active {
+        display: flex;
+    }
+
+    .nav-call {
+        display: none;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .hero {
+        min-height: 550px;
+        padding: 75px 6%;
+    }
+
+    .hero h1 {
+        font-size: 48px;
+        letter-spacing: -2px;
+    }
+
+    .hero-decoration {
+        right: -110px;
+        opacity: .12;
+    }
+
+    .services-section,
+    .why-section,
+    .booking-section,
+    .contact-section {
+        padding: 65px 6%;
+    }
+
+    .section-heading h2 {
+        font-size: 30px;
+    }
+
+    .category-heading h2 {
+        font-size: 19px;
+    }
+
+    .service-grid,
+    .features-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+    }
+
+    .service-card {
+        padding: 20px 15px;
+    }
+
+    .service-card h3 {
+        font-size: 14px;
+    }
+
+    .service-card p {
+        font-size: 11px;
+    }
+
+    .form-row {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+
+    .booking-form {
+        padding: 23px;
+    }
+
+    .contact-card {
+        padding: 30px 18px;
+    }
+
+    .contact-card h2 {
+        font-size: 29px;
+    }
+
+    .floating-whatsapp {
+        right: 12px;
+        bottom: 12px;
+    }
+
+}
+
+@media (max-width: 380px) {
+
+    .service-grid,
+    .features-grid {
+        grid-template-columns: 1fr;
+    }
+
+}
